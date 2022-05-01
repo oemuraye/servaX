@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ServaX</title>
+    <link rel="shortcut icon" href="./assets/images/ServaX-coin-front-black-plain.jpg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="./assets/bootstrap-5.0.1/css/bootstrap.min.css" />
@@ -25,21 +26,21 @@
 </head>
 <body id="particles-js" >
     <div  class="container-fluid p-0">
-    <header class="text-white container-fluid p-2 mb-5 pb-5">
+    <header class="text-white container-fluid p-2 mb-5">
         <nav class="navbar navbar-expand-md fixed-top navbar-dark navbar-color p-2" aria-label="Main navigation">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><h3>ServaX</h3></a>
-                <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="#"><img src="./assets/images/ServaX.png" alt="logo" height="50px" width="150px"></a>
+                <div class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                </button>
+                </div>
 
                 <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+                            <a class="nav-link active" aria-current="page" href="#">Whitepaper</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Notifications</a>
+                            <a class="nav-link" href="#">Roadman</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Profile</a>
@@ -53,8 +54,8 @@
             </div>
         </nav>
 
-        <section class="hero container my-5 py-5 d-flex justify-content-center">
-            <div class="col-md-6 pt-5">
+        <section class="hero container my-5 py-5 d-flex flex-wrap-reverse justify-content-center">
+            <div class="col-md-6 col-sm-10 pt-5 text-md-start text-center">
                 <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, saepe.</h1>
                 <p class="py-2">Lorem ipsum dolor sit amet.</p>
                 <div class="action-area mt-5">
@@ -62,14 +63,46 @@
                     <button class="btn btn-lg btn-warning">Join</button>
                 </div>
             </div>
-            <div class="col-md-6">
-                <img src="./undraw_crypto_portfolio_2jy5.svg" alt="hero-img" width="100%">
+            <div class="col-md-6 col-sm-8">
+                <img src="./assets/images/serva-x-ecosystem.png" alt="hero-img" width="100%">
             </div>
         </section>
     </header>
 
-    <main>
-        
+    <main >
+        <section class="container-fluid market-section my-5 py-5 row text-white m-auto">
+            <div class="container col-md-4">
+                <div class="text-center">
+                    <img src="./assets/images/chained.svg" height="93px" width="120" alt="market-logo">
+                    <h3>Buy</h3>
+                    <p class="text-muted">Buy listed artwork as an NFT using Crypto on OpenSea.</p>
+                </div>
+            </div>
+            <div class="container col-md-4">
+                <div class="text-center">
+                    <img src="./assets/images/stacked.svg" height="93px" width="120" alt="market-logo">
+                    <h3>Sell</h3>
+                    <p class="text-muted">Build artwork for free and sell them as an NFT on OpenSea. Claim your first free sandbox and get an attractive incentive.</p>
+                </div>
+            </div>
+            <div class="container col-md-4">
+                <div class="text-center">
+                    <img src="./assets/images/compact.svg" height="93px" width="120" alt="market-logo">
+                    <h3>Trade</h3>
+                    <p class="text-muted">Trade artwork with other artists, once traded, artwork is yours and you get a chance to make it better.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-fluid about-section my-5">
+          <div class="d-grid justify-content-center m-auto text-center col-md-8 col-sm-10 text-white">
+              <hr>
+            <h2 class="py-3">Who is ServaX</h2> 
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quaerat hic odit perspiciatis porro doloribus exercitationem aliquam, nisi quo fugiat amet ut officiis, quasi aut esse minus! Ab, minima aliquid. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique incidunt sequi, magnam nisi minima harum quod totam veniam libero animi.</p> 
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quaerat hic odit perspiciatis porro doloribus exercitationem aliquam, nisi quo fugiat amet ut officiis, quasi aut esse minus! Ab, minima aliquid.</p> 
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quaerat hic odit perspiciatis porro doloribus exercitationem aliquam, nisi quo fugiat amet ut officiis, quasi aut esse minus! Ab, minima aliquid.</p>
+          </div> 
+        </section>
     </main>
     
     <button onclick="scrollToTop()" id="myBtn" class="rounded-circle btn-lg btn-outline-warning bg-dark fa fa-caret-up" title="Go to top"></button>

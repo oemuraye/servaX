@@ -1,5 +1,5 @@
 :root {
-  --basic-color: #FFC107;
+  --basic-color: #ce9e10;
   --dark-color: #212529;
   --white-color: #fff;
   --light-color: #ebe7e7;
@@ -20,6 +20,7 @@ body {
 canvas.particles-js-canvas-el {
   position: absolute;
   top: 0;
+  height: 175% !important;
 }
 
 /* Header/Navbar */
@@ -36,32 +37,42 @@ header .hero {
 .nav-link {
   color: #fff !important;
 }
+.nav-link:hover {
+  border-bottom: 3px solid var(--basic-color);
+}
 .navbar {
-  animation: 2s ease !important;
+  transition: 2s ease !important;
   z-index: 100;
 }
+.navbar-expand-md .navbar-collapse {
+  flex-grow: 0;
+}
 
-header .hero img {
+header .hero img, 
+footer img {
   animation: floatUpDown 4s linear 4s infinite alternate
 }
 @keyframes floatUpDown {
   0% {
-    transform: translateY(-50px);
+    transform: translateY(-20px);
   }
   50% {
     transform: translateY(0px);
   }
   100% {
-    transform: translateY(-50px);
+    transform: translateY(-20px);
   }
 }
+/* .action-area .btn:hover {
+  cursor: pointer ;
+} */
 
 /* Main */
 .market-section {
   background-color: #00000000;
 }
 hr:not([size]) {
-  width: 15%;
+  width: 75px;
   margin: 0 auto !important;
   color: var(--basic-color);
   height: 4px !important;
@@ -69,6 +80,52 @@ hr:not([size]) {
 
 .about-section {
   border: var(--dark-color);
+}
+
+.how-section {
+  background-color: var(--dark-color);
+  padding: 125px 0;
+}
+.how-section ul {
+  list-style-type: none;
+}
+.how-section ul li::before {
+  content: 'O ';
+  color: var(--basic-color);
+  position: relative;
+  left: -25px;
+  top: 30px;
+}
+.why-section {
+  padding: 125px 0;
+}
+
+.join-section {
+  padding: 125px 0;
+  background-color: #ffeaa7;
+  background-image: linear-gradient(315deg, #ffeaa7 0%, #000000 74%); 
+}
+
+.social-section .action-area a {
+  text-decoration: none;
+  color: var(--basic-color);
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ce9e10,
+    0 0 40px #ce9e10, 0 0 50px #ce9e10, 0 0 60px #ce9e10, 0 0 70px #ce9e10;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #b1b0aa, 0 0 40px #b1b0aa,
+    0 0 50px #b1b0aa, 0 0 60px #b1b0aa, 0 0 70px #b1b0aa, 0 0 80px #b1b0aa;
+  }
 }
 
 /* back to top button */
@@ -83,6 +140,11 @@ hr:not([size]) {
 }
 
 
+
+/* footer */
+footer {
+  background-color: var(--dark-color);
+}
 /* For navbar  */
 @media (max-width: 767px) {
   .offcanvas-collapse {

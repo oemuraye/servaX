@@ -1,6 +1,8 @@
+@import './roadmap.css';
+
 :root {
   --basic-color: #ce9e10;
-  --dark-color: #212529;
+  --dark-color: #161717;
   --white-color: #fff;
   --light-color: #ebe7e7;
 }
@@ -20,7 +22,8 @@ body {
 canvas.particles-js-canvas-el {
   position: absolute;
   top: 0;
-  height: 175% !important;
+  height: 1100px !important;
+  z-index: -1;
 }
 
 /* Header/Navbar */
@@ -41,7 +44,7 @@ header .hero {
   border-bottom: 3px solid var(--basic-color);
 }
 .navbar {
-  transition: 2s ease !important;
+  transition: 2s ease ;
   z-index: 100;
 }
 .navbar-expand-md .navbar-collapse {
@@ -49,6 +52,7 @@ header .hero {
 }
 
 header .hero img, 
+.roadmap-hero img,
 footer img {
   animation: floatUpDown 4s linear 4s infinite alternate
 }
@@ -63,9 +67,7 @@ footer img {
     transform: translateY(-20px);
   }
 }
-/* .action-area .btn:hover {
-  cursor: pointer ;
-} */
+
 
 /* Main */
 .market-section {
@@ -84,7 +86,7 @@ hr:not([size]) {
 
 .how-section {
   background-color: var(--dark-color);
-  padding: 125px 0;
+  padding: 50px 0;
 }
 .how-section ul {
   list-style-type: none;
@@ -97,7 +99,7 @@ hr:not([size]) {
   top: 30px;
 }
 .why-section {
-  padding: 125px 0;
+  padding: 50px 0;
 }
 
 .join-section {
@@ -145,26 +147,8 @@ hr:not([size]) {
 footer {
   background-color: var(--dark-color);
 }
-/* For navbar  */
-@media (max-width: 767px) {
-  .offcanvas-collapse {
-    position: fixed;
-    top: 56px; /* Height of navbar */
-    bottom: 0;
-    left: 100%;
-    width: 100%;
-    padding-right: 1rem;
-    padding-left: 1rem;
-    overflow-y: auto;
-    visibility: hidden;
-    background-color: #343a40;
-    transition: transform .3s ease-in-out, visibility .3s ease-in-out;
-  }
-  .offcanvas-collapse.open {
-    visibility: visible;
-    transform: translateX(-100%);
-  }
-}
+
+
 
 .nav-scroller {
   position: relative;
@@ -201,6 +185,37 @@ footer {
   color: #343a40;
 }
 
-.text-white-50 { color: rgba(255, 255, 255, .5); }
+.text-white-50 { 
+  color: rgba(255, 255, 255, .5); 
+}
 
-.bg-purple { background-color: #6f42c1; }
+.bg-purple { 
+  background-color: #6f42c1; 
+}
+
+/* Responsiveness  */
+@media (max-width: 767px) {
+  .offcanvas-collapse {
+    position: fixed;
+    top: 56px; /* Height of navbar */
+    bottom: 0;
+    left: 100%;
+    width: 50%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    overflow-y: auto;
+    visibility: hidden;
+    background-color: #161717;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg fill-opacity='0.16'%3E%3Cpolygon fill='%2345381d' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23735922' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23a27928' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23d09a2d' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23FFBB33' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    transition: transform 1s ease-in-out, visibility 1s ease-in-out;
+  }
+  .offcanvas-collapse.open {
+    visibility: visible;
+    transform: translateX(-100%);
+  }
+  .canvas.particles-js-canvas-el {
+    height: 1200px !important;
+  }
+}

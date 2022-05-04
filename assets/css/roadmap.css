@@ -1,5 +1,5 @@
 :root {
-  --basic-color: #ce9e10;
+  --basic-color: #f6b723;
   --dark-color: #161717;
   --white-color: #fff;
   --light-color: #ebe7e7;
@@ -146,22 +146,96 @@
     cursor: pointer;
     text-decoration: none;
 }
-/* .timeline > li.timeline-inverted {
-    float: right;
-    clear: right;
-}
-.timeline > li:nth-child(2) {
-    margin-top: 60px;
-}
-.timeline > li.timeline-inverted > .timeline-badge {
-    left: -12px;
-} */
 .no-float {
     float: none !important;
 }
 
 
+
+/**Styling scrollable elements*/
+
+.js-scroll {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+.js-scroll.scrolled {
+  opacity: 1;
+}
+
+.scrolled.fade-in {
+  animation: fade-in .7s ease-in-out both;
+}
+
+.scrolled.fade-in-bottom {
+  animation: fade-in-bottom .7s ease-in-out both;
+}
+
+.scrolled.slide-left {
+  animation: slide-in-left .7s ease-in-out both;
+}
+
+.scrolled.slide-right {
+  animation: slide-in-right .7s ease-in-out both;
+}
+
+
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
 @media (max-width: 767px) {
+    .roadmap-hero img {
+        /* width: 75%; */
+        height: 300px;
+        margin: auto;
+    }
     ul.timeline:before {
         left: 40px;
     }
@@ -205,5 +279,12 @@
     }
     .timeline > li.timeline-inverted > .timeline-badge {
         left: 28px;
+    }
+
+    .scrolled.slide-left {
+        animation: fade-in .7s ease-in-out both;
+    }
+    .scrolled.slide-right {
+        animation: fade-in-bottom .7s ease-in-out both;
     }
 }

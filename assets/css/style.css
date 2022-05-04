@@ -1,10 +1,13 @@
 @import './roadmap.css';
 
 :root {
-  --basic-color: #ce9e10;
+  --basic-color: #f6b723;
   --dark-color: #161717;
   --white-color: #fff;
   --light-color: #ebe7e7;
+}
+.btn-warning, .btn-outline-warning, .text-warning {
+  color: var(--basic-color) !important;
 }
 body {
   font: normal 75% Arial, Helvetica, sans-serif;
@@ -34,7 +37,7 @@ canvas.particles-js-canvas-el {
   background-color: var(--dark-color);
 }
 header .hero {
-  margin-top: 100px !important;
+  /* margin-top: 100px !important; */
   background-color: #219b2f00 !important;
 }
 .nav-link {
@@ -49,10 +52,6 @@ header .hero {
 }
 .navbar-expand-md .navbar-collapse {
   flex-grow: 0;
-}
-header section img {
-  position: relative;
-  top: -75px;
 }
 
 header .hero img, 
@@ -87,19 +86,20 @@ hr:not([size]) {
 .about-section {
   border: var(--dark-color);
 }
-.about-section img {
+.about-section img,
+.social-section img {
   animation: floatSideWays 4s linear 4s infinite alternate
 }
 
 @keyframes floatSideWays {
   0% {
-    transform: translateX(-10px);
+    transform: translateX(-15px);
   }
   50% {
     transform: translateX(0px);
   }
   100% {
-    transform: translateX(-10px);
+    transform: translateX(-15px);
   }
 }
 .how-section {
@@ -208,10 +208,15 @@ footer {
 }
 
 /* Responsiveness  */
-@media (max-width: 767px) {
+@media (max-width: 992px) {
+  header .hero {
+    margin-top: 100px !important;
+  }
+}
+@media (max-width: 765px) {
   .offcanvas-collapse {
     position: fixed;
-    top: 56px; /* Height of navbar */
+    top: 70px; /* Height of navbar */
     bottom: 0;
     left: 100%;
     width: 50%;
@@ -223,7 +228,7 @@ footer {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg fill-opacity='0.16'%3E%3Cpolygon fill='%2345381d' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23735922' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23a27928' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23d09a2d' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23FFBB33' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
     background-attachment: fixed;
     background-size: cover;
-    transition: transform 1s ease-in-out, visibility 1s ease-in-out;
+    transition: transform .5s ease-in-out, visibility 1s ease-in-out;
   }
   .offcanvas-collapse.open {
     visibility: visible;

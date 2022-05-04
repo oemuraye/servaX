@@ -50,6 +50,10 @@ header .hero {
 .navbar-expand-md .navbar-collapse {
   flex-grow: 0;
 }
+header section img {
+  position: relative;
+  top: -75px;
+}
 
 header .hero img, 
 .roadmap-hero img,
@@ -83,7 +87,21 @@ hr:not([size]) {
 .about-section {
   border: var(--dark-color);
 }
+.about-section img {
+  animation: floatSideWays 4s linear 4s infinite alternate
+}
 
+@keyframes floatSideWays {
+  0% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
 .how-section {
   background-color: var(--dark-color);
   padding: 50px 0;
@@ -100,10 +118,6 @@ hr:not([size]) {
 }
 .why-section {
   padding: 50px 0;
-}
-
-.join-section {
-  padding: 125px 0;
   background-color: #ffeaa7;
   background-image: linear-gradient(315deg, #ffeaa7 0%, #000000 74%); 
 }
